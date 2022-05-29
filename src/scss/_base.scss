@@ -55,7 +55,7 @@ a{
 }
 
 @each $val in $numbers {
-    .grid-col-#{$val} {
+    .grid-col-md-#{$val} {
         @include tablet{
 
             grid-template-columns: repeat($val, 1fr);
@@ -64,7 +64,7 @@ a{
 }
 
 @each $val in $numbers {
-    .grid-col-#{$val} {
+    .grid-col-sm-#{$val} {
         @include mobile{
 
             grid-template-columns: repeat($val, 1fr);
@@ -94,4 +94,10 @@ a{
 }
 .grid{
     display:grid;
+}
+.helmet{
+    background-color:#e7e7e7
+}
+img{
+    max-width: 100%;
 }

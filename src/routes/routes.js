@@ -1,5 +1,5 @@
-import Home from '../pages/Home';
-import Catalog from '../pages/Catalog';
+import Home from '../pages/home/Home';
+import Catalog from '../pages/catalog/Catalog';
 import Cart from '../pages/Cart';
 import Product from '../pages/Product';
 const publicRoutes = [

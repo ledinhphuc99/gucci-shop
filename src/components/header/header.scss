@@ -1,8 +1,7 @@
 @use "../../scss" as *;
 
 .header {
-  background-color: $main-color;
-  opacity: 0.3;
+  background-color: rgba(0,0,0,0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +9,6 @@
   height: $header-height;
   z-index: 999;
   color: $text-color;
-  box-shadow: $box-shodow;
   transition: all 0.3s ease;
   
    @include tablet {
@@ -24,7 +22,7 @@
   }
   &.shrink {
     background-color: $main-color;
-    opacity: 1;
+  
   }
   &__logo {
     @include flex(center, center);
@@ -42,7 +40,7 @@
     @include flex(center, space-between);
 
     height: 70%;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
 
     &__item ~ &__item {
       margin-left: 39px;
@@ -119,5 +117,9 @@
           font-size: 2rem;
         }
       }
+  }
+  &:hover {
+    background-color: $main-color;
+  
   }
 }

@@ -1,0 +1,49 @@
+@use "../../scss" as *;
+
+.banner-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+.content {
+  margin-top: 20px;
+  .content-text {
+    position: absolute;
+    width: 37.851%;
+    right: 14%;
+    transform: translateY(50%);
+    text-align: center;
+    @include tablet {
+      right: 44%;
+      transform: translateY(15%);
+    }
+    
+    &__title {
+      color: $text-white;
+      height: 54px;
+      width: 510px;
+      font-size: 3.6rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      @include mobile{
+        font-size: 1.6rem;
+        width: 200px;
+        margin-bottom:0;
+      }
+    }
+    &__description {
+      color: $text-white;
+      width: 510px;
+      height: 152px;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 4rem;
+      @include mobile{
+        font-size: 1rem;
+        line-height: 1rem;
+        width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../scss" as *;
+
+.section {
+    margin-top: 150px;
+  margin-bottom: 80px;
+  background-color:#e7e7e7;
+  & > * ~ * {
+      margin-top: 70px;
+  }
+  &__title{
+      font-size: 3.6rem;
+      text-transform: capitalize;
+      text-align: center;
+      font-weight: 400;
+      color: #313131;
+      letter-spacing: 4px;
+      line-height:4rem;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #999;
+    bottom: 40px;
+    height: 1px;
+    left: 50%;
+    margin-left: -72px;
+    width: 144px;
+
+  }
+     
+  }
+
+  &__body{
+      font-size:2rem;
+      color:#666666;
+      line-height: 4rem;
+      p{
+          height: 189px;
+          width: 498px;
+          text-align: center;
+         
+          display: block;
+          margin:auto
+      }
+  }
+
+}

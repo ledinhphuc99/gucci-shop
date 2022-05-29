@@ -4,6 +4,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/boxicons-2.1.2/css/boxicons.min.css'
 import './scss/index.scss'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,0 +1,59 @@
+@use "../../scss" as *;
+.catalog{
+    
+    &__banner{
+        
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    }
+    &-body{
+        @include flex(flex-start,flex-start);
+        &__filter{
+            width: 20%;
+            @include tablet {
+                width: unset;
+            }
+            &__widget{
+                margin: 2rem;
+                &__title{
+                    font-size:1.6rem;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    margin-bottom:16px;
+                }
+                &__content {
+                    color:$text-black;
+                    &__item{
+                        margin-bottom:13px;
+                    }
+                    &__btn{
+                        height: 40px;
+                        width: 80px;
+                        border: none;
+                        background-color: $main-color;
+                        border-radius: 4px;
+                        color: $text-white;
+                        cursor: pointer;
+                       &:hover{
+                           background-color: #cccccc;
+                           color: $text-black
+                       }
+                    }
+                }
+    
+            }
+        }
+        &__content {
+            flex-grow: 1;
+
+            @include tablet {
+                width: 100%;
+            }
+            
+        }
+    }
+}

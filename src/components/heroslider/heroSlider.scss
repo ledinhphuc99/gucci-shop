@@ -1,0 +1,124 @@
+@use "../../scss" as *;
+
+.hero-slider {
+  height: 57vh;
+  max-height: 1080px;
+  overflow: hidden;
+    // position:relative;
+  margin-bottom: 50px;
+  // margin-top:calc(#{$header-height} * -1);
+
+  &__item {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    height: 68%;
+    width: 100%;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: visible;
+    }
+    &__image {
+      height: 400px;
+      width: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .hero-slider__item__info {
+        position: relative;
+        height: 167px;
+        @include flex(center, center);
+        flex-direction: column;
+        bottom: 275px;
+        color: $text-white;
+        opacity: 0;
+        // transform:translatex(-100%);
+        transition: all 0.5s ease;
+        &__title {
+          height: 100px;
+          .title {
+            width: 100%;
+            height: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 400;
+            text-transform: uppercase;
+            @include mobile {
+              font-size: 1.2rem;
+            }
+          }
+          .subtitle {
+            height: 70px;
+            font-size: 6.6rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            @include mobile {
+              font-size: 2.6rem;
+            }
+          }
+        }
+        .hero-slider__btn {
+          width: 130px;
+          height: 40px;
+          background-color: #00000035;
+          border: 2px solid $text-white;
+          color: $text-white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #313131;
+            border: none;
+          }
+        }
+        &.show {
+          opacity: 1;
+          // transform: translatex(0)
+        }
+      }
+    }
+  }
+  &__control {
+    width: 100%;
+    @include flex(center, space-between);
+    position: absolute;
+    bottom: 332px;
+    @include mobile {
+      display: none;
+    }
+
+    &__item ~ &__item {
+      margin-left: 10px;
+    }
+    &__item {
+      @include flex(center, center);
+      font-size: 2.2rem;
+      cursor: pointer;
+
+      .index {
+        font-size: 1.8rem;
+        color: $text-white;
+      }
+    }
+    .hero-slider__control__btn {
+      height: 150px;
+      width: 150px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      &__left,
+      &__right {
+        font-size: 15rem;
+        color: $text-white;
+      }
+      &__right {
+        margin-right: 100px;
+      }
+    }
+  }
+}
