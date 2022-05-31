@@ -13,8 +13,7 @@ import Section, {
   SectionBody,
 } from "../../components/section/Section";
 import {
-  heroSliderDataBag,
-  heroSliderDataBanner,
+    heroSliderDataBanner,
 } from "../../assets/fake-data/hero-slider";
 import productData from "../../assets/fake-data/products";
 import ProductCard from "../../components/productcart/ProductCard";

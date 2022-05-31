@@ -9,6 +9,12 @@ const bag3= require('../images/bags/bag_3.jpg')
 const bag4= require('../images/bags/bag_4.jpg')
 const bag5= require('../images/bags/bag_5.jpg')
 
+const shirt1 = require('../images/banners/bannershirt_1.png')
+const shirt2 = require('../images/banners/bannershirt_2.png')
+const shirt3 = require('../images/banners/bannershirt_3.png')
+const shirt4 = require('../images/banners/bannershirt_4.png')
+const shirt5 = require('../images/banners/bannershirt_5.png')
+
 const heroSliderDataBanner = [
     { 
         title: "available to shop starting from June 7th",
@@ -96,5 +102,52 @@ const heroSliderDataBag = [
   
     
 ]
+const heroSliderDatashirt = [
+    { 
+        title: " Cotton poplin shirt",
+        subtitle: "AU$ 920",
+        path: "/Catalog/adidas-gucci-lookbook",
+        button: "DISCOVER THE LOOKS ",
+        img: shirt1
+   
 
-export {heroSliderDataBanner, heroSliderDataBag}
+    },
+    { 
+        title: " Cotton poplin shirt",
+        subtitle: "AU$ 920",
+        path: "/Catalog/gucci-blondie",
+        button: "Shop Now ",
+        img: shirt2
+
+    },
+    { 
+        title: " Cotton poplin shirt",
+        subtitle: "AU$ 920",
+        path: "/Catalog/adidas-gucci-lookbook",
+        button: "Shop Now ",
+        img: shirt3
+
+
+    }, { 
+        title: " Cotton poplin shirt",
+        subtitle: "AU$ 920",
+        path: "/Catalog/adidas-gucci-lookbook",
+        button: "Shop Now ",
+        img: shirt4
+
+
+    },
+    { 
+        title: " Cotton poplin shirt",
+        subtitle: "AU$ 920",
+        path: "/Catalog/adidas-gucci-lookbook",
+        button: "Shop Now ",
+        img: shirt5
+
+
+    },
+  
+    
+]
+
+export {heroSliderDataBanner, heroSliderDataBag,heroSliderDatashirt}

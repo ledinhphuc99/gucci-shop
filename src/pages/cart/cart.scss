@@ -1,0 +1,104 @@
+@use "../../scss" as *;
+
+.cart-banner {
+  height: 57vh;
+  max-height: 1080px;
+
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 57%;
+  }
+  &__title {
+    position: absolute;
+    z-index: 100;
+    top: 42%;
+    right: 35%;
+    transform: translate(-10%, -42%);
+    color: $text-white;
+    font-size: 4.6rem;
+    font-weight: 400;
+    height: 50px;
+  }
+}
+.cart {
+  @include flex(flex-start, flex-start);
+
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    width: 100%;
+
+    top: calc(#{$header-shrink-height}+20px);
+    padding: 20px;
+  }
+  &__info {
+    width: 60%;
+    height: 80%;
+    margin: 30px 30px 30px 200px;
+    padding: 20px;
+    background-color: $text-white;
+    box-shadow: $box-shodow;
+    top: calc(#{$header-shrink-height}+20px);
+    @include mobile {
+      width: 83%;
+      height: 80%;
+      margin: 31px 30px 30px 41px;
+    }
+    &__txt {
+      & > * {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: #9999;
+      }
+      &__price {
+        @include flex(center, space-between);
+        padding: 10px 0;
+        font-size: 1.2rem;
+
+        span:nth-child(2) {
+          font-size: 2rem;
+          color: $main-color;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__btn {
+      button {
+        height: 40px;
+        width: 300px;
+        background-color: $main-color;
+        color: $text-white;
+        margin: 10px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      a {
+        button {
+          height: 40px;
+          width: 300px;
+          background-color: $text-white;
+          color: $text-black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__list {
+    &__title {
+      font-size: 1.2rem;
+      color: #999999;
+    }
+  }
+}

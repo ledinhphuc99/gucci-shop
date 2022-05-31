@@ -110,8 +110,8 @@ const Footer = () => {
   return (
     <footer className={cx('footer')}>
       <div className="container">
-        <Grid col={5} mdCol={2} smCol={1} gap={10}>
-          <div>
+        <Grid col={5} mdCol={3} smCol={1} gap={10}>
+          <div className={cx('footer-group')}>
             <div className={cx("footer__title")}>EXCLUSIVE SERVICES</div>
             <div className={cx("footer__content")}>
               <p>Exclusive Online Services</p>
@@ -121,7 +121,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className={cx('footer-group')}>
             <div className={cx("footer__title")}>MAY WE HELP YOU?</div>
             <div className={cx("footer__content")}>
               {footerCustomerLinks.map((item, index) => (
@@ -132,7 +132,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className={cx('footer-group')}>
             <div className={cx("footer__title")}>THE COMPANY</div>
             <div className={cx("footer__content")}>
               {footerAboutLinks.map((item, index) => (
@@ -143,7 +143,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className={cx('footer-group')}>
             <div className={cx("footer__title")}>FIND US ON</div>
             <div className={cx("footer__content")}>
               {footerSocialNetworkLinks.map((item, index) => (
@@ -157,7 +157,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className={cx('footer-group')}>
             <div className={cx("footer__title")}>SIGN UP FOR GUCCI UPDATES</div>
             <div className={cx("footer__content")}>
               <p>
@@ -173,7 +173,7 @@ const Footer = () => {
              <input type="text" placeholder="City,Region,Country" />
               <button><i class='bx bx-chevron-right'></i></button>
              </div>
-             <div className={cx("footer__Group")}></div>
+             <div className={cx("footer__group")}></div>
             </div>
           </div>
         </Grid>

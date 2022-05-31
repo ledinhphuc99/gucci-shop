@@ -16,12 +16,13 @@ const mainNav = [
     path: "/catalog",
   },
   {
-    display: "HANDBAGS",
-    path: "/handbag",
+    display: "CHILDREN",
+    path: "/children",
   },
   {
-    display: "CONTACT",
-    path: "/contact",
+    display: "+61 1300492212",
+    icon:<i class='bx bxs-phone'></i>,
+    path: "#",
   },
 ];
 
@@ -82,6 +83,7 @@ const Header = () => {
                 )}
                 onClick={menuToggle}
               >
+                {item.icon}
                 <Link to={item.path}>
                   <span>{item.display}</span>
                 </Link>

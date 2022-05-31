@@ -87,7 +87,7 @@
     width: 100%;
     @include flex(center, space-between);
     position: absolute;
-    bottom: 332px;
+    bottom: 530px;
     @include mobile {
       display: none;
     }

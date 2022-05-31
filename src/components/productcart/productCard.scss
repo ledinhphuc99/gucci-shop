@@ -2,19 +2,23 @@
 .product-card{
     text-align: center;
     border: 1px solid $text-white;
+    @include tablet{
+        width: 33,33%;
+    }
     &__image{
         padding: 50%;
         position: relative;
         overflow: hidden;
         margin-bottom:30px;
+        @include mobile{
+            padding: 25%;
+        }
 
         img{
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%) ;
-            height: auto;
-            width: 200px;
             margin-top: 20px;
 
             &:nth-child(1){

@@ -4,16 +4,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/boxicons-2.1.2/css/boxicons.min.css'
 import './scss/index.scss'
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import store from './redux/store'
+import{Provider} from 'react-redux'
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <Provider store={store}>
     <App />
+
+  </Provider>
   </React.StrictMode>
 );
 

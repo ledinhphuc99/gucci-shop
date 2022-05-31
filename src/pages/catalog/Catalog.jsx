@@ -1,13 +1,12 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Helmet from "../../components/Helmet";
-import Grid from "../../components/Grid";
-import ProductCard from "../../components/productcart/ProductCard";
 import productData from "../../assets/fake-data/products";
 import banner from "../../assets/images/women/bannerwomen.jpg";
 import category from "../../assets/fake-data/category";
 import CheckBox from "../../components/checkbox/CheckBox";
 import colors from "../../assets/fake-data/product-color";
 import size from "../../assets/fake-data/product-size";
+import InfinityList from "../../components/infinitylist/InfinityList"
 import "./catalog.scss";
 const Catalog = () => {
   const innitFilter = {
@@ -63,8 +62,8 @@ const Catalog = () => {
     () =>{
       let temp = productList
 
-      if( filter.category.length >0) {
-        temp =temp.filter(e => filter.category.includes(e.slug))
+      if( filter.category.length > 0) {
+        temp =temp.filter(e => filter.category.includes(e.categorySlug));
       }
       if(filter.color.length > 0){
         temp = temp.filter(e=>{
@@ -86,6 +85,10 @@ const Catalog = () => {
   useEffect(() => {
     updtableProducts()
   },[updtableProducts])
+
+  const filterRef = useRef(null);
+
+  const showHideFilter = () => filterRef.current.classList.toggle('active')
   return (
     <Helmet title="product">
       <div className="catalog">
@@ -93,7 +96,10 @@ const Catalog = () => {
           <img src={banner} alt="" />
         </div>
         <div className="catalog-body">
-          <div className="catalog-body__filter">
+          <div className="catalog-body__filter"  ref={filterRef}>
+          <div className="catalog-body__filter__close" onClick={showHideFilter}>
+            <i className="bx bx-left-arrow-alt" ></i>
+          </div>
             <div className="catalog-body__filter__widget">
               <div className="catalog-body__filter__widget__title">
                 product portfolio
@@ -144,22 +150,16 @@ const Catalog = () => {
                 </button>
               </div>
             </div>
+
           </div>
+            <div className="catalog-body__filter__toggle">
+              <button onClick={showHideFilter}>Filter</button>
+            </div>
           <div className="catalog-body__content"></div>
-          <Grid col={3} mdCol={2} smCol={1} gap={1}>
-            {products.map((item, index) => (
-              <ProductCard
-                key={index}
-                img01={item.img1}
-                img02={item.img2}
-                name={item.title}
-                link={item.link}
-                price={item.price}
-                icon={item.icon}
-                slug={item.slug}
-              />
-            ))}
-          </Grid>
+          <InfinityList 
+            data={products}
+          />
+         
         </div>
       </div>
     </Helmet>

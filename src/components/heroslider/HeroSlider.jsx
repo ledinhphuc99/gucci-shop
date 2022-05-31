@@ -70,6 +70,7 @@ HeroSlider.propTypes = {
   control: PropTypes.bool,
   auto: PropTypes.bool,
   timeout: PropTypes.number,
+  
 };
 
 const HeroSliderItem = (props) => (

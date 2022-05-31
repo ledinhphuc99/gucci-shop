@@ -1,0 +1,86 @@
+@use "../../scss" as *;
+
+.cart__item{
+    @include flex(flex-start, flex-start);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    height: 280px;
+    padding: 20px;
+    &__image{
+        width: 30%;
+        margin-right:20px;
+
+        img{
+            height: 200px;
+        }
+    }
+    &__info{
+        width: 40%;
+        height: 94px;
+        border-right: 1px solid #ccc;
+        &__name{
+            font-size: 1.6em;
+            color: $main-color;
+            cursor: pointer;
+            margin-bottom: 12px;
+            &:hover{
+                color:#999
+            }
+
+        }
+        &__size,&__color{
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+        &__avallable{
+            margin: 15px 0 5px 0;
+            &__title{
+                font-size: 1.2rem;
+                color: #313131;
+                margin-bottom:14px;
+            }
+            &__description{
+                font-size: 1.2rem;
+                color: #888888
+            }
+        }
+        &__del{
+            font-size:1.2rem;
+            font-weight: 600;
+            color: $main-color;
+            padding-bottom:35px;
+            button{
+                border: none;
+                cursor: pointer;
+                width: 56px;
+                padding: 0 5px 0 10px;
+                &:hover{
+                    color:#999
+                }
+
+            }
+        }
+    }
+    &__quantity{
+        width: 10%;
+        margin-right: 10px;
+        margin-left: 10px;
+        select{
+            cursor: pointer;
+            text-align: center;
+            height: 30px;
+            width: 60px;
+            border: 1px solid #ccc ;
+            &:hover{
+                border: 2px solid $main-color 
+            }
+        }
+    }
+    &__price{
+        margin-left: 20px;
+        font-size: 1.6em;
+        font-weight: normal;
+    }
+}
