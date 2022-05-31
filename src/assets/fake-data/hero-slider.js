@@ -1,4 +1,6 @@
-const banner1 = require('../images/banners/banner_1.jpg')
+import banner1 from '../images/banners/banner_1.jpg'
+
+// const banner1 = require('../images/banners/banner_1.jpg')
 const banner2 = require('../images/banners/banner_2.jpg')
 const banner3 = require('../images/banners/banner_3.jpg')
 const banner4 = require('../images/banners/banner_7.jpg')
