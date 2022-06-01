@@ -50,12 +50,14 @@
             font-size:1.2rem;
             font-weight: 600;
             color: $main-color;
+            margin-top: 20px;
             padding-bottom:35px;
             button{
                 border: none;
                 cursor: pointer;
                 width: 56px;
                 padding: 0 5px 0 10px;
+                background-color: transparent;
                 &:hover{
                     color:#999
                 }

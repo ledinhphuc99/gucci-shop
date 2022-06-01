@@ -45,6 +45,9 @@
     background-color: $text-white;
     box-shadow: $box-shodow;
     top: calc(#{$header-shrink-height}+20px);
+    @include tablet{
+      margin:0
+    }
     @include mobile {
       width: 83%;
       height: 80%;
@@ -59,6 +62,7 @@
         font-size: 1.5rem;
         color: #9999;
       }
+      
       &__price {
         @include flex(center, space-between);
         padding: 10px 0;
@@ -101,4 +105,7 @@
       color: #999999;
     }
   }
+}
+span {
+  font-size: 1.2rem;
 }

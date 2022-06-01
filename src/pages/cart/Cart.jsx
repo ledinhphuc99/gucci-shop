@@ -10,7 +10,6 @@ import styles from './cart.scss'
 import bannercart from '../../assets/images/banners/banner_12.jpg'
 
 import CartItem from '../../components/cartitem/CartItem'
-import Grid  from '../../components/Grid'
 const cx = classNames.bind(styles);
 const Cart = () => {
   const cartItems = useSelector((state) => state.cartItems.value)
